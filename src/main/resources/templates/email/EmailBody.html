@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:remove="all">Email disparado por intermediário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>
+            Mensagem enviada pelo broker jw-progammer.
+        </h1>
+        <h2>
+            Remetente da mensagem: <span th:text="${email.sender}"></span>
+        </h2>
+        <h3>
+            Hora do envio: <span th:text="${#dates.format(instante, 'dd/MM/yyyy hh:mm')}"></span>
+        </h3>
+        <h3>
+            Mensagem:
+        </h3>
+        <br>
+        <p th:text="${email.message}"></p>
+    </body>   
+</html>
