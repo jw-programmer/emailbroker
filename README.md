@@ -1,9 +1,9 @@
 # Broker de e-mail
 
-Este projeto é um projeto spring boot feito para se lançar e-maisl. Uma conta de email pessoal será usada para essa finalidade. Com isso, se pouca esforço no momento de se implementar um serviço de e-mail.
+This project is a spring boot project designed to launch emails. A personal email account will be used for this purpose. This saves effort when implementing an e-mail service.
 
 ## Para configurar um projeto.
-Sendo um projeto spring, basta baixar as dependẽncias maven e inicar normalmente. Porém, você pode criar o arquivo application-dev.propreties para poder subir um profile e colocar as informações sensíves. Em application-prod.propreties, as mesmas informações ficaram disponíveis, porém de forma sgura, para que elas sejam lidas por variáves de ambiente. No caso deste projeto, as informações a serem protejidas são as credenciais da conta de e-mail.
+Being a spring project, just download the maven dependencies and start normally. However, you can create the application-dev.properties file in order to upload a dev profile and place sensitive information. In application-prod.properties, the same information was available, but in a secure way, so that it can be read by environment variables. In the case of this project, the information to be protected is the credentials of the email account.
 
 ```propreties
 spring.mail.host=smtp.gmail.com
@@ -16,16 +16,16 @@ spring.mail.properties.mail.smtp.socketFactory.fallback = false
 spring.mail.properties.mail.smtp.starttls.enable = true
 spring.mail.properties.mail.smtp.ssl.enable = true
 ``` 
-Lembresse de trocar o profile da aplicação de dev para prod na hora de realizar o deploy.
+Remember to change the application profile from dev to prod when deploying.
 
 ## Utilizando.
-Uma vez que o broker está iniciado basta realizar uma operação de POST em /email. O objeto esperado é o descrito abaixo.
+Once the broker is started, just perform a POST operation in / email. The expected object is the one described below.
 
 ```json
 {
- "recipient":"<O email de pessoa que você quer alcançar>",
-  "sender":"<Seu nome. Como o email do remetente é fixo, Apenas uma identificação basta>",
-  "subject":"<Assunto do email>",
-  "message":"<A mensagem propríamente dita.>"
+"recipient": "<The email of the person you want to reach>",
+   "sender": "<Your name. Since the sender's email is fixed, just one identification is enough>",
+   "subject": "<Email subject>",
+   "message": "<The message properly said.>"
 }
 ```
