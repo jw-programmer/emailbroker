@@ -1,5 +1,7 @@
 # Broker de e-mail
 
+[![Build Status](https://travis-ci.org/jw-programmer/emailbroker.svg?branch=master)](https://travis-ci.org/jw-programmer/emailbroker)
+
 This project is a spring boot project designed to launch emails. A personal email account will be used for this purpose. This saves effort when implementing an e-mail service.
 
 ## Para configurar um projeto.
