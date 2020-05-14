@@ -13,8 +13,10 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 @Profile("prod")
 public class ProdConfig {
+
     @Bean
-    public EmailService emailService(){
+    public EmailService emailService() {
         return new SmtpEmailService();
     }
+
 }
