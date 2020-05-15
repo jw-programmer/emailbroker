@@ -10,7 +10,7 @@
     </parent>
     <groupId>br.josias</groupId>
     <artifactId>emailsender</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>emailsender</name>
     <description>Broker para disparo de e-mails</description>
 
