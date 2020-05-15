@@ -4,7 +4,7 @@
 
 This project is a spring boot project designed to launch emails. A personal email account will be used for this purpose. This saves effort when implementing an e-mail service.
 
-## Para configurar um projeto.
+## To set up a project
 Being a spring project, just download the maven dependencies and start normally. However, you can create the application-dev.properties file in order to upload a dev profile and place sensitive information. In application-prod.properties, the same information was available, but in a secure way, so that it can be read by environment variables. In the case of this project, the information to be protected is the credentials of the email account.
 
 ```propreties
@@ -20,7 +20,7 @@ spring.mail.properties.mail.smtp.ssl.enable = true
 ``` 
 Remember to change the application profile from dev to prod when deploying.
 
-## Utilizando.
+## Using
 Once the broker is started, just perform a POST operation in / email. The expected object is the one described below.
 
 ```json
