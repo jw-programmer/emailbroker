@@ -10,7 +10,7 @@
     </parent>
     <groupId>br.josias</groupId>
     <artifactId>emailsender</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <name>emailsender</name>
     <description>Broker para disparo de e-mails</description>
 
@@ -31,7 +31,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
