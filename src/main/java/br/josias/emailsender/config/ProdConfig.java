@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Profile;
 public class ProdConfig {
 
     @Bean
-    public EmailService emailService() {
+    EmailService emailService() {
         return new SmtpEmailService();
     }
 

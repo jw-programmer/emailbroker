@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.Objects;
 import javax.validation.constraints.NotEmpty;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * E-mail class to REST
  * @author josias
@@ -13,16 +15,20 @@ public class Email implements Serializable{
     
     private static final long serialVersionUID = 1L;
     
+    @ApiModelProperty(value = "O e-mail da pessoa para quem você deseja enviar")
     @NotEmpty(message="Não pode ser Vazio")
     @javax.validation.constraints.Email(message = "E-mail do remetente inválido")
     private String recipient;
     
+    @ApiModelProperty(value = "Sua indentificação. Como o e-mail do remetente é fixo, um nome basta.")
     @NotEmpty(message="Não pode ser Vazio")
     private String sender;
     
+    @ApiModelProperty(value = "O assunto do e-mail.")
     @NotEmpty(message="Não pode ser Vazio")
     private String subject;
     
+    @ApiModelProperty(value = "A mensagem do e-mail propriamente dita.")
     @NotEmpty(message="Não pode ser Vazio")
     private String message;
 
